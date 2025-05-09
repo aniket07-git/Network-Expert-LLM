@@ -1,0 +1,55 @@
+# Config for running the InferenceRecipe in generate.py to generate output from an LLM
+#
+# To launch, run the following command from root torchtune directory:
+#    tune run generate --config generation
+
+# Model arguments
+model:
+  _component_: torchtune.models.llama3_2.llama3_2_1b
+
+checkpointer:
+  _component_: torchtune.training.FullModelHFCheckpointer
+  checkpoint_dir: Llama-3.2-1B-Instruct-alpaca/
+  checkpoint_files: [
+    hf_model_0001_0.pt,
+    # adapter_0.pt
+    # model.safetensors
+  ]
+  recipe_checkpoint: null
+  output_dir: Llama-3.2-1B-Instruct-alpaca/
+  model_type: LLAMA3_2
+
+device: cuda
+dtype: bf16
+
+seed: 1234
+
+# Tokenizer arguments
+tokenizer:
+  _component_: torchtune.models.llama3.llama3_tokenizer
+  path: Llama-3.2-1B-Instruct/original/tokenizer.model
+  max_seq_len: null
+  prompt_template: null
+
+# Generation arguments; defaults taken from gpt-fast
+prompt:
+  system: null
+  user: "
+        Answer the following multiple choice question. Explain your reasoning and provide a final answer in the end in the format:
+         'Answer: <your answer>'.
+         Please provide your reasoning as well.
+        question: Which function does a GLK STA coordinate with to create a virtual point-to-point LAN between a general link and an associated GLK STA?,
+        options:[
+            A.GLK divergence function,
+            B.MAC convergence function,
+            C.GLK convergence function,
+            D.SAP convergence function
+        ]
+        "
+max_new_tokens: 1000
+temperature: 0 # 0.8 and 0.6 are popular values to try
+top_k: 300
+
+enable_kv_cache: True
+
+quantizer: null

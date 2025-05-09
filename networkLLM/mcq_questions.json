@@ -1,0 +1,402 @@
+[
+    {
+        "question":"Which function does a GLK STA coordinate with to create a virtual point-to-point LAN between a general link and an associated GLK STA?",
+        "options":[
+            "A.GLK divergence function ",
+            "B.MAC convergence function",
+            "C.GLK convergence function",
+            "D.SAP convergence function"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"What does the convergence function present the created virtual point-to-point LAN as?",
+        "options":[
+            "A.GLK STA",
+            "B.Internal Sublayer Service SAP",
+            "C.External Sublayer Service SAP",
+            "D.IEEE 803.1L bridge port"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"What is the Internal Sublayer Service SAP mapped to?",
+        "options":[
+            "A.IEEE 802.1Q bridge port",
+            "B.IEEE 802.1Q switch port",
+            "C.IEEE 802.1Q VLAN tags",
+            "D.IEEE 802.3 Ethernet network"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"The GLK STA and convergence function assign each created SAP with a locally unique identifier called?",
+        "options":[
+            "A.mac_service_data_unit",
+            "B.connection_identifier",
+            "C.bridge_port_identifier",
+            "D.service_access_point_identifier"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"In a GLK STA the MAC service uses which 2 parameters?",
+        "options":[
+            "A.service_access_point_identifiers and PPDU format indicator",
+            "B.service_access_point_identifiers and MSDU format indicator",
+            "C.service_access_point_identifiers and MPDU format indicator",
+            "D.connection_identifier and MSDU format indicator"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"What parameters does the MA-UNITDATA.request primitive require?",
+        "options":[
+            "A.set of service_access_point_identifiers to be used and an MSDU format indicator in either EPD or LPD formats ",
+            "B.vector of one service_access_point_identifier and an MSDU format indicator in either EPD or LPD formats ",
+            "C.set of service_access_point_identifiers and the detected MSDU format indicator",
+            "D.vector of one service_access_point_identifier and the detected MSDU format indicator"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"What parameters does the MA-UNITDATA.indication primitive supply?",
+        "options":[
+            "A.vector of one service_access_point_identifier and an MSDU format indicator in either EPD or LPD formats ",
+            "B.set of service_access_point_identifiers to be used and the detected MSDU format indicator",
+            "C.vector of one service_access_point_identifier that carried the MSDU and the detected MSDU format indicator",
+            "D.set of service_access_point_identifiers and an MSDU format indicator in either EPD or LPD formats "
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"What does the GLK STA do in case of MSDU format mismatch at transmission?",
+        "options":[
+            "A.Discard the MSDU",
+            "B.Convert to the specified format",
+            "C.Transmit anyway",
+            "D.Use the GLK convergence function to convert format"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Who generates the locally unique service_access_point_identifiers?",
+        "options":[
+            "A.IEEE 802.1Q bridge port",
+            "B.GLK STA and GLK convergence function",
+            "C.Sender\/Receiver",
+            "D.MAC data service specification"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which primitive requests an MSDU transfer?",
+        "options":[
+            "A.DL-UNITDATA.request",
+            "B.MA-UNITDATA.indication",
+            "C.MA-UNITDATA-STATUS.indication",
+            "D.MA-UNITDATA.request"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Is the routing information parameter in MA-UNITDATA.request used in IEEE Std 802.11",
+        "options":[
+            "A.Yes",
+            "B.No",
+            null,
+            null
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which of the following formats does the MSDU format parameter of the MA-UNITDATA.request primitive indicate?",
+        "options":[
+            "A.EPD",
+            "B.LPD",
+            "C.A-MSDU",
+            null
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"Which of the following is not an MA-UNIDATA.request primitive parameter?",
+        "options":[
+            "A.station_vector",
+            "B.service_class",
+            "C.reception_status",
+            "D.priority"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Which of the following is not an MA-UNIDATA.indication primitive parameter?",
+        "options":[
+            "A.reception status",
+            "B.transmission status",
+            "C.MSDU format",
+            "D.priority"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which of the following is not an MA-UNITDATA-STATUS.indication parameter?",
+        "options":[
+            "A.provided service class",
+            "B.provided priority",
+            "C.transmission status",
+            "D.MSDU format"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Which of the following is not a MAC data service specification primitive?",
+        "options":[
+            "A.DL-UNITDATA.request",
+            "B.MA-UNITDATA.indication",
+            "C.MA-UNITDATA-STATUS.indication",
+            "D.MA-UNITDATA.request"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"Which primitive is generated by the LLC sublayer entity when an MSDU is to be transferred to a peer LLC sublayer entity or entities or to a peer bridge or bridges?",
+        "options":[
+            "A.DL-UNITDATA.request",
+            "B.MA-UNITDATA.indication",
+            "C.MA-UNITDATA-STATUS.indication",
+            "D.MA-UNITDATA.request"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Which primitive defines the transfer of an MSDU from the MAC sublayer entity to the LLC sublayer entity or bridge port, or entities or bridge ports in the case of group addresses?",
+        "options":[
+            "A.DL-UNITDATA.request",
+            "B.MA-UNITDATA.indication",
+            "C.MA-UNITDATA-STATUS.indication",
+            "D.MA-UNITDATA.request"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which of these is not a MA-UNITDATA-STATUS.indication transmission status parameter value?",
+        "options":[
+            "A.Successful ",
+            "B.Undeliverable",
+            "C.Undeliverable: unsupported priority",
+            "D.Unknown"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Which primitive has local significance and provides the LLC sublayer or bridge port with status information for the corresponding preceding MA-UNITDATA.request primitive?",
+        "options":[
+            "A.DL-UNITDATA.request",
+            "B.MA-UNITDATA.indication",
+            "C.MA-UNITDATA-STATUS.indication",
+            "D.MA-UNITDATA.request"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter is used to indicate whether an MSDU can be discarded in preference to other MSDUs incase of insufficient STA resources?",
+        "options":[
+            "A.drop eligible ",
+            "B.service class",
+            "C.MSDU format",
+            "D.station vector"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter specifies the requested service class of the data unit transfer?",
+        "options":[
+            "A.priority",
+            "B.data",
+            "C.service class",
+            "D.drop eligible"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter indicates the set of virtual point-to-point LANs\/general links over which the MSDU is transferred?",
+        "options":[
+            "A.source address(SA)",
+            "B. station vector",
+            "C.destination address(DA)",
+            "D.data"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter indicates whether the supplied MSDU is in EPD\/LPD format?",
+        "options":[
+            "A.source address(SA)",
+            "B.destination address(DA)",
+            "C.service class",
+            "D.MSDU format"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter specifies the requested priority of the data unit transfer?",
+        "options":[
+            "A.service class",
+            "B.priority ",
+            "C.MSDU format",
+            "D.drop eligible"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter specifies the MSDU to be transmitted by the MAC sublayer entity?",
+        "options":[
+            "A.service class",
+            "B.station vector",
+            "C.priority",
+            "D.data"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter specifies the route for the data transfer (and is null)?",
+        "options":[
+            "A.routing information",
+            "B.source address(SA)",
+            "C.destination address(DA)",
+            "D.station vector"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter specifies an individual MAC sublayer address of the sublayer entity from which the MSDU is being transferred?",
+        "options":[
+            "A.priority ",
+            "B.drop eligible ",
+            "C.source address(SA)",
+            "D.routing information"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Which MA-UNITDATA.request parameter specifies either an individual or a group MAC sublayer entity address?",
+        "options":[
+            "A.routing information",
+            "B.station vector",
+            "C.drop eligible ",
+            "D.destination address(DA)"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter is an individual address as specified by the SA field of the incoming frame?",
+        "options":[
+            "A.source address(SA)",
+            "B.drop eligible ",
+            "C.service class",
+            "D.station vector"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter is either an individual or a group address as specified by the DA field of the incoming frame?",
+        "options":[
+            "A.priority",
+            "B.source address(SA)",
+            "C.destination address(DA)",
+            "D.service class"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter specifies the route that was used for the data transfer?",
+        "options":[
+            "A.MSDU format",
+            "B.drop eligible ",
+            "C.destination address(DA)",
+            "D.routing information"
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter specifies the MSDU as received by the local MAC entity?",
+        "options":[
+            "A.drop eligible ",
+            "B.data",
+            "C.station vector",
+            "D.service class"
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter indicates the success or failure of the received frame?",
+        "options":[
+            "A.reception status",
+            "B.drop eligible ",
+            "C.routing information",
+            "D.transmission status"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter indicates whether the received MSDU was designated as drop eligible in the DEI subfield of the HT variant HT Control field of the incoming frame?",
+        "options":[
+            "A.provided priority",
+            "B.destination address(DA)",
+            "C.drop eligible ",
+            "D.priority "
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter specifies the receive processing priority that was used for the data unit transfer?",
+        "options":[
+            "A.destination address(DA)",
+            "B.reception status",
+            "C.transmission status",
+            "D.priority "
+        ],
+        "correct_option":"D"
+    },
+    {
+        "question":"Does MA-UNITDATA.indication primitive's reception status parameter report failures?",
+        "options":[
+            "A.Yes",
+            "B.No",
+            null,
+            null
+        ],
+        "correct_option":"B"
+    },
+    {
+        "question":"Which MA-UNITDATA-STATUS.indication parameter is used to pass status information back to the local requesting LLC sublayer entity or bridge port?",
+        "options":[
+            "A.transmission status",
+            "B.provided priority",
+            "C.drop eligible ",
+            "D.provided service class"
+        ],
+        "correct_option":"A"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter indicates only the single virtual point-to-point LAN\/general link for current data transfer over which the MSDU was received?",
+        "options":[
+            "A.reception status",
+            "B.routing information",
+            "C. station vector",
+            "D.data"
+        ],
+        "correct_option":"C"
+    },
+    {
+        "question":"Which MA-UNITDATA.indication parameter indicates if the received MSDU is in EPD or LPD format?",
+        "options":[
+            "A.drop eligible ",
+            "B.transmission status",
+            "C.routing information",
+            "D.MSDU format"
+        ],
+        "correct_option":"D"
+    }
+]
